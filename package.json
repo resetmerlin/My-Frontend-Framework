@@ -1,0 +1,24 @@
+{
+  "name": "My-Frontend-Framework",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "https://github.com/resetmerlin/My-Frontend-Framework.git",
+  "author": "resetmerlin <resetmerlin@gmail.com>",
+  "license": "MIT",
+  "scripts": {
+    "build": "rm -rf build/ && parcel build index.js -d build/",
+    "start": "rm -rf .cache && rm -rf dist && parcel serve index.html",
+    "docs": "vuepress dev book",
+    "build:docs": "vuepress build book && rm -rf ./docs && mv ./book/.vuepress/dist ./docs"
+  },
+  "dependencies": {
+    "parcel-bundler": "^1.12.5",
+    "snabbdom": "^3.6.2"
+  },
+  "devDependencies": {
+    "babel-core": "^6.26.3",
+    "babel-plugin-transform-object-rest-spread": "^6.26.0",
+    "babel-preset-env": "^1.7.0",
+    "vuepress": "^1.9.10"
+  }
+}
